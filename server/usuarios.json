@@ -1,0 +1,34 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "email": "vinicios@alura.com.br",
+            "senha": "123456",
+            "nome": "Vinicios"
+        },
+        {
+            "id": 2,
+            "email": "vinicios@alura.com.br",
+            "senha": "123",
+            "nome": "vinicios"
+        },
+        {
+            "id": 3,
+            "email": "adm",
+            "senha": "padtec",
+            "nome": "Gustavo Carvalho"
+        },
+        {
+            "id": 4,
+            "email": "gustavocarvalho_ti@hotmail.com",
+            "senha": "1234",
+            "nome": "Gustavo Carvalho"
+        },
+        {
+            "id": 5,
+            "email": "gustavocarvalho_ti@hotmail.com",
+            "senha": "123456",
+            "nome": "Gustavo Carvalho"
+        }
+    ]
+}
