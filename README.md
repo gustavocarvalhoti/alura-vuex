@@ -7,6 +7,7 @@ Existem 2 projetos nesse treinamento, web (Frontend) e server (Backend).
 ````
 
 <img alt="web" src="./web/src/assets/01.png"/>
+<img alt="web" src="./web/src/assets/02.png"/>
 
 ## Coisas que aprendi nesse treinamento.
 
