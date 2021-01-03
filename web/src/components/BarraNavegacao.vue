@@ -21,28 +21,21 @@
 <script>
 import BarraNavegacaoLogado from '../components/BarraNavegacaoLogado';
 import BarraNavegacaoDeslogado from '../components/BarraNavegacaoDeslogado';
+import {mapGetters} from 'vuex';
 
 export default {
     name: 'BarraNavegacao',
-    data() {
-        return {
-            usuarioLogado: false,
-        }
-    },
     components: {
         BarraNavegacaoLogado,
         BarraNavegacaoDeslogado,
     },
-    methods: {
-        verificarUsuarioLogado() {
-            this.usuarioLogado = Boolean(localStorage.getItem('token'));
+    computed: {
+        ...mapGetters(['usuarioLogado']),
+        isLogged() {
+            // Dá para utilizar assim tb
+            return this.$store.getters.usuarioLogado;
         },
     },
-    watch: {
-        '$route.path'() {
-            this.verificarUsuarioLogado();
-        },
-    }
 }
 
 </script>

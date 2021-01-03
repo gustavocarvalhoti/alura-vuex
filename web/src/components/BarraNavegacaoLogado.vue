@@ -18,13 +18,11 @@
 
 <script>
 
+// Recebe o efetuarLogout
+import {mixins} from "../mixins";
+
 export default {
-    methods: {
-        efetuarLogout() {
-            this.$router.push('login');
-            localStorage.removeItem('token');
-        },
-    },
+    mixins: [mixins],
 }
 
 </script>

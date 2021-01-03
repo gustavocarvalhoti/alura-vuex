@@ -1,33 +1,46 @@
 import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '../views/Home';
-import Gerentes from "../views/Gerentes";
-import NovoUsuario from "../views/NovoUsuario";
-import Login from "../views/Login";
+import VueRouter from 'vue-router';
+import provedor from "../store";
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
+const router = new VueRouter({
     routes: [
         {
             path: '/',
             name: 'home',
-            component: Home,
+            component: () => import('../views/Home'),
         },
         {
             path: '/gerentes',
             name: 'gerentes',
-            component: Gerentes,
+            component: () => import('../views/Gerentes'),
         },
         {
             path: '/cadastre-se',
             name: 'novo.usuario',
-            component: NovoUsuario,
+            component: () => import('../views/NovoUsuario'),
+            meta: {
+                public: true,
+            }
         },
         {
             path: '/login',
             name: 'login',
-            component: Login,
+            component: () => import('../views/Login'),
+            meta: {
+                public: true,
+            }
         },
     ],
 });
+
+// Verifica antes de montar cada componente
+router.beforeEach((routeTo, routeFrom, next) => {
+    if (!routeTo.meta.public && !provedor.state.token) {
+        next({path: '/login'});
+    }
+    next();
+});
+
+export default router;
