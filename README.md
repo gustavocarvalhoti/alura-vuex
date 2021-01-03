@@ -1,8 +1,8 @@
 # Treinamento da Alura sobre Vuex.
 
 ````
-Nesse treinamento desenvolvi um sistema de login por token, 
-nele mostrando como salvar o token na sessão e na store do Vuex.
+Nesse treinamento desenvolvi um sistema de login utilizando token. 
+Salvando o token na sessão e na store do Vuex.
 Existem 2 projetos nesse treinamento, web (Frontend) e server (Backend).
 ````
 
@@ -20,7 +20,8 @@ Actions     <- Ação que executa alguma coisa e chama a mutation.
 Getters     <- Lê as informações do State.
 Mixins      <- Actions mais utiliuzadas, como por exemplo logout.
 
-Interceptors através do axios.
+Interceptors através do axios. 
+Passando o token em todas as resquests.
 
 Verificar o token antes de construir o componente no router.
 
