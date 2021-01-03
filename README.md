@@ -6,8 +6,8 @@ nele mostrando como salvar o token na sessão e na store do Vuex.
 Existem 2 projetos nesse treinamento, web (Frontend) e server (Backend).
 ````
 
-<img alt="web" src="./web/src/assets/01.png"/>
-<img alt="web" src="./web/src/assets/02.png"/>
+<img alt="web1" src="./web/src/assets/01.png"/>
+<img alt="web2" src="./web/src/assets/03.png"/>
 
 ## Coisas que aprendi nesse treinamento.
 
